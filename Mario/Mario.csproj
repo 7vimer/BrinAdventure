@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C41A7963-3B1E-478E-B96A-A9857B44CD15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mario</RootNamespace>
+    <AssemblyName>Mario</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\background_layer_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\background_layer_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pl1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="playerPrew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image_part_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="run1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\floorFiller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\moving1\st11\" />
+    <Folder Include="images\moving2\st11\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hearth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\moving1\st0\1.png" />
+    <Resource Include="images\moving1\st0\2.png" />
+    <Resource Include="images\moving1\st0\3.png" />
+    <Resource Include="images\moving1\st0\4.png" />
+    <Resource Include="images\moving1\st0\5.png" />
+    <Resource Include="images\moving1\st0\6.png" />
+    <Resource Include="images\moving1\st10\1.png" />
+    <Resource Include="images\moving1\st10\2.png" />
+    <Resource Include="images\moving1\st10\3.png" />
+    <Resource Include="images\moving1\st10\4.png" />
+    <Resource Include="images\moving1\st10\5.png" />
+    <Resource Include="images\moving1\st10\6.png" />
+    <Resource Include="images\moving1\st12\1.png" />
+    <Resource Include="images\moving1\st12\10.png" />
+    <Resource Include="images\moving1\st12\11.png" />
+    <Resource Include="images\moving1\st12\12.png" />
+    <Resource Include="images\moving1\st12\2.png" />
+    <Resource Include="images\moving1\st12\3.png" />
+    <Resource Include="images\moving1\st12\4.png" />
+    <Resource Include="images\moving1\st12\5.png" />
+    <Resource Include="images\moving1\st12\6.png" />
+    <Resource Include="images\moving1\st12\7.png" />
+    <Resource Include="images\moving1\st12\8.png" />
+    <Resource Include="images\moving1\st12\9.png" />
+    <Resource Include="images\moving1\st1\1.png" />
+    <Resource Include="images\moving1\st1\2.png" />
+    <Resource Include="images\moving1\st1\3.png" />
+    <Resource Include="images\moving1\st1\4.png" />
+    <Resource Include="images\moving1\st1\5.png" />
+    <Resource Include="images\moving1\st1\6.png" />
+    <Resource Include="images\moving1\st1\7.png" />
+    <Resource Include="images\moving1\st1\8.png" />
+    <Resource Include="images\moving1\st1\9.png" />
+    <Resource Include="images\moving1\st2\1.png" />
+    <Resource Include="images\moving1\st2\2.png" />
+    <Resource Include="images\moving1\st2\3.png" />
+    <Resource Include="images\moving1\st2\4.png" />
+    <Resource Include="images\moving1\st2\5.png" />
+    <Resource Include="images\moving1\st2\6.png" />
+    <Resource Include="images\moving1\st2\7.png" />
+    <Resource Include="images\moving1\st2\8.png" />
+    <Resource Include="images\moving1\st2\9.png" />
+    <Resource Include="images\moving1\st3\1.png" />
+    <Resource Include="images\moving1\st3\2.png" />
+    <Resource Include="images\moving1\st4\1.png" />
+    <Resource Include="images\moving1\st4\2.png" />
+    <Resource Include="images\moving1\st5\1.png" />
+    <Resource Include="images\moving1\st5\2.png" />
+    <Resource Include="images\moving1\st5\3.png" />
+    <Resource Include="images\moving1\st5\4.png" />
+    <Resource Include="images\moving1\st6\1.png" />
+    <Resource Include="images\moving1\st6\2.png" />
+    <Resource Include="images\moving1\st6\3.png" />
+    <Resource Include="images\moving1\st6\4.png" />
+    <Resource Include="images\moving1\st7\1.png" />
+    <Resource Include="images\moving1\st7\2.png" />
+    <Resource Include="images\moving1\st7\3.png" />
+    <Resource Include="images\moving1\st7\4.png" />
+    <Resource Include="images\moving1\st8\1.png" />
+    <Resource Include="images\moving1\st8\2.png" />
+    <Resource Include="images\moving1\st8\3.png" />
+    <Resource Include="images\moving1\st8\4.png" />
+    <Resource Include="images\moving1\st9\1.png" />
+    <Resource Include="images\moving1\st9\2.png" />
+    <Resource Include="images\moving1\st9\3.png" />
+    <Resource Include="images\moving1\st9\4.png" />
+    <Resource Include="images\moving1\st9\5.png" />
+    <Resource Include="images\moving1\st9\6.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_010.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_017.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_018.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_019.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_020.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_021.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_022.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_023.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_024.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_025.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_026.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_027.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_028.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_033.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_034.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_035.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_036.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_037.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_038.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_039.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_040.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_041.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_042.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_043.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_044.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_045.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_046.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_047.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_048.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_049.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char1\image_part_050.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_015.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_016.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_017.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_018.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_019.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_020.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_021.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_022.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_023.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_024.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_031.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_032.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_033.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_038.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_039.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_040.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_041.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_042.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_043.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_044.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_065.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_066.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_067.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_068.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_069.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_070.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_071.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_072.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_073.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_074.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_075.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_081.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_082.png" />
+    <Resource Include="images\moving1\unsortedPlayer\char2\image_part_083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\moving2\st0\1.png" />
+    <Resource Include="images\moving2\st0\2.png" />
+    <Resource Include="images\moving2\st0\3.png" />
+    <Resource Include="images\moving2\st0\4.png" />
+    <Resource Include="images\moving2\st0\5.png" />
+    <Resource Include="images\moving2\st0\6.png" />
+    <Resource Include="images\moving2\st10\1.png" />
+    <Resource Include="images\moving2\st10\2.png" />
+    <Resource Include="images\moving2\st10\3.png" />
+    <Resource Include="images\moving2\st10\4.png" />
+    <Resource Include="images\moving2\st10\5.png" />
+    <Resource Include="images\moving2\st10\6.png" />
+    <Resource Include="images\moving2\st12\1.png" />
+    <Resource Include="images\moving2\st12\10.png" />
+    <Resource Include="images\moving2\st12\11.png" />
+    <Resource Include="images\moving2\st12\12.png" />
+    <Resource Include="images\moving2\st12\2.png" />
+    <Resource Include="images\moving2\st12\3.png" />
+    <Resource Include="images\moving2\st12\4.png" />
+    <Resource Include="images\moving2\st12\5.png" />
+    <Resource Include="images\moving2\st12\6.png" />
+    <Resource Include="images\moving2\st12\7.png" />
+    <Resource Include="images\moving2\st12\8.png" />
+    <Resource Include="images\moving2\st12\9.png" />
+    <Resource Include="images\moving2\st1\1.png" />
+    <Resource Include="images\moving2\st1\2.png" />
+    <Resource Include="images\moving2\st1\3.png" />
+    <Resource Include="images\moving2\st1\4.png" />
+    <Resource Include="images\moving2\st1\5.png" />
+    <Resource Include="images\moving2\st1\6.png" />
+    <Resource Include="images\moving2\st1\7.png" />
+    <Resource Include="images\moving2\st1\8.png" />
+    <Resource Include="images\moving2\st1\9.png" />
+    <Resource Include="images\moving2\st2\1.png" />
+    <Resource Include="images\moving2\st2\2.png" />
+    <Resource Include="images\moving2\st2\3.png" />
+    <Resource Include="images\moving2\st2\4.png" />
+    <Resource Include="images\moving2\st2\5.png" />
+    <Resource Include="images\moving2\st2\6.png" />
+    <Resource Include="images\moving2\st2\7.png" />
+    <Resource Include="images\moving2\st2\8.png" />
+    <Resource Include="images\moving2\st2\9.png" />
+    <Resource Include="images\moving2\st3\1.png" />
+    <Resource Include="images\moving2\st3\2.png" />
+    <Resource Include="images\moving2\st4\1.png" />
+    <Resource Include="images\moving2\st4\2.png" />
+    <Resource Include="images\moving2\st5\1.png" />
+    <Resource Include="images\moving2\st5\2.png" />
+    <Resource Include="images\moving2\st5\3.png" />
+    <Resource Include="images\moving2\st5\4.png" />
+    <Resource Include="images\moving2\st6\1.png" />
+    <Resource Include="images\moving2\st6\2.png" />
+    <Resource Include="images\moving2\st6\3.png" />
+    <Resource Include="images\moving2\st6\4.png" />
+    <Resource Include="images\moving2\st7\1.png" />
+    <Resource Include="images\moving2\st7\2.png" />
+    <Resource Include="images\moving2\st7\3.png" />
+    <Resource Include="images\moving2\st7\4.png" />
+    <Resource Include="images\moving2\st8\1.png" />
+    <Resource Include="images\moving2\st8\2.png" />
+    <Resource Include="images\moving2\st8\3.png" />
+    <Resource Include="images\moving2\st8\4.png" />
+    <Resource Include="images\moving2\st9\1.png" />
+    <Resource Include="images\moving2\st9\2.png" />
+    <Resource Include="images\moving2\st9\3.png" />
+    <Resource Include="images\moving2\st9\4.png" />
+    <Resource Include="images\moving2\st9\5.png" />
+    <Resource Include="images\moving2\st9\6.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_017.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_018.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_019.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_020.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_021.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_022.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_023.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_024.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_025.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_026.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_027.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_028.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_033.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_034.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_035.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_036.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_037.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_038.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_039.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_040.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_041.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_042.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_043.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_044.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_045.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_046.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_047.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_048.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_049.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char1\image_part_050.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_015.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_016.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_017.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_018.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_019.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_020.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_021.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_022.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_023.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_024.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_031.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_032.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_033.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_038.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_039.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_040.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_041.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_042.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_043.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_044.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_065.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_066.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_067.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_068.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_069.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_070.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_071.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_072.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_073.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_074.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_075.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_081.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_082.png" />
+    <Resource Include="images\moving2\unsortedPlayer\char2\image_part_083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\hearth1.png" />
+    <Resource Include="images\hearth2.png" />
+    <Resource Include="images\hearth3.png" />
+    <Resource Include="images\hearth4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\dd.png" />
+    <Resource Include="images\haste.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="Mario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+		xmlns:winForms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mario"
+        mc:Ignorable="d"
+        Title="Brin's Adventure" Height="720" Width="1280" ResizeMode="NoResize" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Icon="/icon.png" MouseDown="Window_MouseDown">
+    <Grid>
+        <Canvas x:Name="Game">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/background.png" Stretch="Fill"/>
+            </Canvas.Background>
+
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="582" Canvas.Top="586" Width="144" Tag="platf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="731" Canvas.Top="586" Width="144" Tag="platf" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="880" Canvas.Top="574" Width="144" Tag="platf" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="284" Canvas.Top="562" Width="144" Tag="platf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="433" Canvas.Top="574" Width="144" Tag="platf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="skinL" Content="Label" Canvas.Left="108" Canvas.Top="317" FontSize="16"/>
+            <Label x:Name="statusL" Content="Label" Canvas.Left="108" Canvas.Top="348" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label x:Name="Hp" Content="Label" Canvas.Left="108" Canvas.Top="286" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="135" Canvas.Top="550" Width="144" Tag="platf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Height="50"  Width="80" Canvas.Top="195" Tag ="hearth1" HorizontalAlignment="Center" VerticalAlignment="Center" Uid="1"/>
+            <Rectangle Height="50"  Width="80" Canvas.Top="250" Tag ="hearth1" HorizontalAlignment="Center" VerticalAlignment="Center" Uid="2"/>
+            <Rectangle Height="50"  Width="80" Canvas.Top="305" Tag ="hearth1" HorizontalAlignment="Center" VerticalAlignment="Center" Uid="3"/>
+            <Rectangle Height="50"  Width="80" Canvas.Top="200" Tag ="hearth2" HorizontalAlignment="Center" VerticalAlignment="Center" Uid="1" Canvas.Left="1190"/>
+            <Rectangle Height="50"  Width="80" Canvas.Top="255" Tag ="hearth2" HorizontalAlignment="Center" VerticalAlignment="Center" Uid="2" Canvas.Left="1190"/>
+            <Rectangle Height="50"  Width="80" Canvas.Top="310" Tag ="hearth2" HorizontalAlignment="Center" VerticalAlignment="Center" Uid="3" Canvas.Left="1190"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="952" Canvas.Top="510" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="803" Canvas.Top="464" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="477" Canvas.Top="386" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="223" Canvas.Top="276" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="952" Canvas.Top="374" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="338" Canvas.Top="476" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="709" Canvas.Top="335" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="108" Canvas.Top="398" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="127" Canvas.Top="144" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="405" Canvas.Top="196" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="1090" Canvas.Top="598" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="1019" Canvas.Top="255" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Rectangle Fill="Gray" Height="24" Canvas.Left="726" Canvas.Top="156" Width="144" Tag="Airplatf" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <!--<Rectangle x:Name="Player1" Height="58" Stroke="Black" Canvas.Left="450"  Canvas.Top="476" Width="56" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>-->
+            <!--<Rectangle x:Name="Player2" Height="58" Stroke="Black" Canvas.Left="654"  Canvas.Top="430" Width="56" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>-->
+        </Canvas>
+
+
+
+    </Grid>
+</Window>
